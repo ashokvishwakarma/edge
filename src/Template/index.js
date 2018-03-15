@@ -267,7 +267,7 @@ class Template {
    * @chainable
    */
   setView (viewName) {
-    this._viewName = this._loader.normalizeViewName(viewName)
+    this._viewName = this._loader.normalizeViewName(viewName, this._options.extension)
     return this
   }
 

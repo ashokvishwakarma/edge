@@ -87,7 +87,7 @@ class Loader {
    * @private
    */
   normalizeViewName (view, extension = 'edge') {
-    return `${view.replace(/\.edge$/, '').replace(/\.(\w+|\d+)/g, '/$1').replace(/\/{3}/, '.')}.${extension}`
+    return `${view.replace(/\.edge|.html$/, '').replace(/\.(\w+|\d+)/g, '/$1').replace(/\/{3}/, '.')}.${extension}`
   }
 
   /**

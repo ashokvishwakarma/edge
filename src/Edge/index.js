@@ -27,7 +27,8 @@ class Edge {
     this._globals = require('../Globals')
     this._loader = new Loader()
     this._options = {
-      cache: false
+      cache: false,
+      extension: 'edge'
     }
     this._boot()
   }

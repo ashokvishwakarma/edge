@@ -116,6 +116,13 @@ test.group('Loader', () => {
     assert.equal(output, path.join(viewsPath, 'welcome.edge'))
   })
 
+  test('make absolute path to view when name has .html extension', (assert) => {
+    const viewsPath = path.join(__dirname, '../test-helpers/views')
+    const loader = new Loader(viewsPath)
+    const output = loader.getViewPath(loader.normalizeViewName('welcome.html', 'html'))
+    assert.equal(output, path.join(viewsPath, 'welcome.html'))
+  })
+
   test('make absolute path to view when name is seperated with (.)', (assert) => {
     const viewsPath = path.join(__dirname, '../test-helpers/views')
     const loader = new Loader(viewsPath)
